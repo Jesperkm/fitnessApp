@@ -26,21 +26,23 @@ function dashboard(username, uid) {
 		height : '10%',
 		width : '100%',
 		backgroundColor: '#d95b44',
-		top : '0',
-		layout : 'vertical'
+		top: 0,
 	});
+	
+	wrapper.add(header);
 
 	// Header title
 	var title1 = Ti.UI.createLabel({
 		color : '#fff',
-		width : '40%',
+		bottom: "5px",
 		text : 'Dashboard',
 		textAlign : 'center',
-		top : '20px',
 		font : {
 			fontSize : '17dp'
 		}
 	});
+	
+	header.add(title1);
 	
 	// Settings icon
 	var settingsicon = Ti.UI.createImageView({
@@ -48,7 +50,7 @@ function dashboard(username, uid) {
 		height : '25px',
 		image : '/img/settings.png',
 		right : '20',
-		top : '-35px'
+		bottom: "15px"
 	});
 	
 	
@@ -58,8 +60,6 @@ function dashboard(username, uid) {
 		dashboardWindow.close();
 	});
 
-	wrapper.add(header);
-	header.add(title1);
 	header.add(settingsicon);
 	
 	//
@@ -194,7 +194,7 @@ function dashboard(username, uid) {
 	var makeRouteIcon = Titanium.UI.createImageView({
 		title : 'icon',
 		image : '/img/plus.png',
-		left : "10px",
+		left : "25px",
 		width : '85%',
 		height : '20%',
 		top : '40%'
@@ -241,7 +241,7 @@ function dashboard(username, uid) {
 	var statisticsIcon = Titanium.UI.createImageView({
 		title : 'icon',
 		image : '/img/analysis.png',
-		left : "15px",
+		left : "25px",
 		width : '85%',
 		height : '20%',
 		top: '40%'
