@@ -23,7 +23,7 @@ function dashboard(username, uid) {
 	
 	// Header
 	var header = Ti.UI.createView({
-		height: Ti.Platform.osname == 'iphone' ? '114px' : '10%',
+		height: Ti.Platform.osname == 'iphone' ? '64pt' : '10%',
 		width : '100%',
 		backgroundColor: '#d95b44',
 		top: 0,

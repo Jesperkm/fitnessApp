@@ -13,7 +13,7 @@ function routes(username, uid) {
 	// Navigation
 	var navView = Titanium.UI.createView({
 	    backgroundColor: '#d5503d',
-	    height: Ti.Platform.osname == 'iphone' ? '114px' : '10%',
+	    height: Ti.Platform.osname == 'iphone' ? '64pt' : '10%',
 	    top: '0',
 	    width: Ti.UI.FILL
 	});

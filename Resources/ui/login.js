@@ -21,7 +21,7 @@ function LoginView() {
 	// Topbar view
 	//
 	var topBar = Ti.UI.createView ({
-		height:'9%',
+		height: Ti.Platform.osname == 'iphone' ? '64pt' : '10%',
 		width: '100%',
 		backgroundColor: '#d95b44'
 	});
