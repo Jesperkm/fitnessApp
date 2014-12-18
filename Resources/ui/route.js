@@ -17,7 +17,7 @@ function routeWindow(prevWindow, route) {
 	// Navigation
 	var navView = Titanium.UI.createView({
 	    backgroundColor: '#d5503d',
-	    height: '9%',
+	    height: Ti.Platform.osname == 'iphone' ? '114px' : '10%',
 	    top: '0',
 	    width: Ti.UI.FILL
 	});

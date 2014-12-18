@@ -23,7 +23,7 @@ function dashboard(username, uid) {
 	
 	// Header
 	var header = Ti.UI.createView({
-		height : '10%',
+		height: Ti.Platform.osname == 'iphone' ? '114px' : '10%',
 		width : '100%',
 		backgroundColor: '#d95b44',
 		top: 0,
@@ -34,7 +34,7 @@ function dashboard(username, uid) {
 	// Header title
 	var title1 = Ti.UI.createLabel({
 		color : '#fff',
-		bottom: "5px",
+		bottom: "13px",
 		text : 'Dashboard',
 		textAlign : 'center',
 		font : {
@@ -50,7 +50,7 @@ function dashboard(username, uid) {
 		height : '25px',
 		image : '/img/settings.png',
 		right : '20',
-		bottom: "15px"
+		bottom: "23px"
 	});
 	
 	

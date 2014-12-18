@@ -22,7 +22,7 @@ function settings(username, uid) {
 	//
 	var topBar = Titanium.UI.createView({
 	    backgroundColor: '#d5503d',
-	    height: '9%',
+	    height: Ti.Platform.osname == 'iphone' ? '114px' : '10%',
 	    top: '0',
 	    width: Ti.UI.FILL
 	});
@@ -76,8 +76,7 @@ function settings(username, uid) {
 			TextAlign: 'center',
 			bottom: '13px',
 			font : {
-				fontSize: '17dp',
-				fontWeight: 'bold'
+				fontSize: '17dp'
 			}
 		});
 		topBar.add(contentTitle);
@@ -89,8 +88,7 @@ function settings(username, uid) {
 			color: '#fff',
 			TextAlign: 'center',
 			font : {
-				fontSize: '17dp',
-				fontWeight: 'bold'
+				fontSize: '17dp'
 			}
 		});
 		topBar.add(contentTitle);	
@@ -140,7 +138,7 @@ function settings(username, uid) {
 		titleOn:'Voice Enabled',
 		titleOff:'Voice Disabled',
 		color: '#fff',
-		value:true,
+		value: true,
 		right: '20px'
 	});
 	
