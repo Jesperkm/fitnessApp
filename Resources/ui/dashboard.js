@@ -7,15 +7,9 @@ function dashboard(username, uid) {
 	//
 	var dashboardWindow = Titanium.UI.createWindow({
 		title : 'Dashboard',
-		backgroundImage : 'img/bg.jpg',
+		backgroundImage : '/img/bg.jpg',
 		height: Ti.UI.FILL,
 		statusBarStyle: Ti.Platform.osname == "iphone" ? Ti.UI.iPhone.StatusBar.LIGHT_CONTENT : null
-	});
-	
-	dashboardWindow.animate({ 
-		backgroundColor:'#000', 
-		duration:3000, 
-		curve:Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT
 	});
 	
 	var wrapper = Ti.UI.createView ({

@@ -43,7 +43,6 @@ function LoginView() {
 	back.addEventListener('click', function(e){
 		var welcomeView = require('ui/welcome-view');
 		new welcomeView().open();
-		
 		loginWin.close();
 	});
 	
