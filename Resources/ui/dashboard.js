@@ -8,7 +8,6 @@ function dashboard(username, uid) {
 	var dashboardWindow = Titanium.UI.createWindow({
 		title : 'Dashboard',
 		backgroundImage : '/img/bg.jpg',
-		height: Ti.UI.FILL,
 		statusBarStyle: Ti.Platform.osname == "iphone" ? Ti.UI.iPhone.StatusBar.LIGHT_CONTENT : null
 	});
 	
@@ -37,7 +36,7 @@ function dashboard(username, uid) {
 		width : '40%',
 		text : 'Dashboard',
 		textAlign : 'center',
-		top : '23',
+		top : '20px',
 		font : {
 			fontSize : '17dp'
 		}
@@ -49,7 +48,7 @@ function dashboard(username, uid) {
 		height : '25px',
 		image : '/img/settings.png',
 		right : '20',
-		top : '-17'
+		top : '-35px'
 	});
 	
 	
@@ -166,7 +165,7 @@ function dashboard(username, uid) {
 	//
 	// Lav ny Rute
 	//
-	var makeRouteButton = Titanium.UI.createButton({
+	var makeRouteButton = Titanium.UI.createView({
 		width : '50%',
 		height : '100%',
 		backgroundColor : '#d95b44',
@@ -195,8 +194,8 @@ function dashboard(username, uid) {
 	var makeRouteIcon = Titanium.UI.createImageView({
 		title : 'icon',
 		image : '/img/plus.png',
-		left : "30px",
-		width : '90%',
+		left : "10px",
+		width : '85%',
 		height : '20%',
 		top : '40%'
 	});
@@ -221,8 +220,9 @@ function dashboard(username, uid) {
 	//
 	// Statistik over løberuter
 	//
-	var statisticsBtn = Ti.UI.createButton ({
+	var statisticsBtn = Ti.UI.createView ({
 		width : '50%',
+		height : '100%',
 		layout : 'horizontal',
 		backgroundColor: '#1b1c20'
 	});
@@ -241,8 +241,8 @@ function dashboard(username, uid) {
 	var statisticsIcon = Titanium.UI.createImageView({
 		title : 'icon',
 		image : '/img/analysis.png',
-		left : "30px",
-		width : '90%',
+		left : "15px",
+		width : '85%',
 		height : '20%',
 		top: '40%'
 	});

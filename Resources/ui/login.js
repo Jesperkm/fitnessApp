@@ -25,21 +25,39 @@ function LoginView() {
 		width: '100%',
 		backgroundColor: '#d95b44'
 	});
-	
-	var back = Ti.UI.createButton ({
-		title: 'Back',
-		left: '0',
-		top: '20px',
-		width: '20%',
-		height: '100%',
-		backgroundColor: 'transparent',
-		color: '#fff',
-		font: {
-			fontSize: '16dp',
-			fontWeight: 'bold'
-		}
-	});
-	
+
+	var back;	
+	if (Titanium.Platform.name == 'android') {
+	    // Android stuff
+		var back = Ti.UI.createButton ({
+			title: 'Back',
+			left: '0',
+			width: '20%',
+			height: '100%',
+			backgroundColor: 'transparent',
+			color: '#fff',
+			font: {
+				fontSize: '16dp',
+				fontWeight: 'bold'
+			}
+		});
+	}
+	else {
+		back = Ti.UI.createButton ({
+			title: 'Back',
+			left: '0',
+			top: '20px',
+			width: '20%',
+			height: '100%',
+			backgroundColor: 'transparent',
+			color: '#fff',
+			font: {
+				fontSize: '16dp',
+				fontWeight: 'bold'
+			}
+		});
+	}
+
 	back.addEventListener('click', function(e){
 		var welcomeView = require('ui/welcome-view');
 		new welcomeView().open();
@@ -73,8 +91,6 @@ function LoginView() {
 		width:'70%',
 		height: '90px',
 		backgroundColor: '#fff',
-		borderColor: '#000',
-		borderWidth: '1px',
 		top: '50px',
 		color: '#000',
 		hintText: 'Brugernavn',
@@ -93,8 +109,6 @@ function LoginView() {
 		height: '90px',
 		backgroundColor: '#fff',
 		color: '#000',
-		borderColor: '#000',
-		borderWidth: '1px',
 		top: '20px',
 		hintText: 'Adgangskode',
 		passwordMask: true,
